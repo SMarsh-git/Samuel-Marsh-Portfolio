@@ -2,13 +2,13 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
-    color:rgb(246, 246, 246);
+    color:var(--font-color);
     font-size: 22px;
     font-weight:200;
     text-align:justify;
  
 }
-/*
+/*<!--
 COLOUR PALLETTES
 1
 text rgb(246, 246, 246)
@@ -17,14 +17,15 @@ lighter grey used for box insidessrgb(54, 57, 63)
 footer colour rgb(32, 34, 37)
 2
 text rgb(246, 246, 246)
-darker purple used for outside of boxes rgb(47,49,54)
-lighter purple used for inside of boxes rgb(54, 57, 63)
+darker purple used for outside of boxes rgb(81, 34, 174)
+lighter purple used for inside of boxes rgb(27, 20, 61)
 footer colour rgb(5, 0, 25) 
-
+-->
 */
 h1{
     font-size: 50px;
     font-weight: 600;
+    color: var(--heading-color);
 }
 
 h3 {
@@ -32,6 +33,7 @@ h3 {
     font-style: italic;
     text-decoration:underline;
     text-align:center;
+    color: var(--heading-color);
 }
 .content-box {
     display: flex;
@@ -43,13 +45,14 @@ h3 {
 .sidebar {
     display: flex;
     flex-direction: column;
-    background-color: rgb(47,49,54);
+    background-color: var(--bg-color);
     flex: 40%;
     padding: 0% 1% 1% 0.5%;
+    
 }
 
 .name-box {
-    background-color: rgb(54, 57, 63);
+    background-color: var(--primary-color);
     display: flex;
     justify-content: center;
     border-radius:15px;
@@ -60,7 +63,7 @@ h3 {
 }
 
 .sidebar-box {
-    background-color: rgb(54, 57, 63);
+    background-color: var(--primary-color);
     padding: 0.5em 2em 2em 2em;
     border-radius:15px;
     margin-bottom:5%;
@@ -70,12 +73,12 @@ h3 {
     display: flex;
     flex-direction: column;
     flex: 0 100%;
-    background-color: rgb(47,49,54);
+    background-color: var(--bg-color);
     padding: 0 1% 1em 0;
 }
 
 .nav-bar{
-    background-color: rgb(47,49,54);
+    background-color: var(--bg-color);
     display: flex;
     justify-content: space-between;
     margin-top: 1em;
@@ -94,10 +97,11 @@ h3 {
     display: flex;
     border-radius:15x;
     cursor: pointer;
-    background-color: rgb(54, 57, 63);
+    background-color: var(--primary-color);
     border: 0;
     border-radius:15px;
     padding: 10px 26px 10px 26px ;
+    color: var(--heading-color);
     
 
 }
@@ -105,7 +109,7 @@ h3 {
 .text-body {
     display: flex;
     flex-direction: column;
-    background-color: rgb(54, 57, 63);
+    background-color: var(--primary-color);
     padding: 0.5em 2em 2em 2em;
     border-radius:15px;
 }
@@ -116,11 +120,92 @@ h3 {
 
 .footer{
     display: flex;
-    justify-content: space-around;
-    position:absolute;
+    justify-content: space-between;
+    position:sticky;
     width: 100%;
     margin-top: 0em;
-    background-color: rgb(32, 34, 37);
+    background-color: var(--footing-color);
     padding-top: 8px;
     padding-bottom: 10px;
+    color: var(--font-color);
 }
+.footer p{
+    padding: 0 1%;
+}
+
+:root {
+    --primary-color: rgb(54, 57, 63);
+    --font-color: rgb(246, 246, 246);
+    --bg-color: rgb(47,49,54);
+    --heading-color: rgb(246, 246, 246);
+    --footing-color: rgb(32, 34, 37);
+}
+
+[data-theme="dark"] {
+    --primary-color: rgb(254,254,250);
+    --font-color: rgb(19, 19, 19);
+    --bg-color: rgb(243,240,231);
+    --heading-color: rgb(0, 0, 0);
+    --footing-color: rgb(197, 195, 187);
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--footing-color);
+  }
+  .theme-switch-wrapper em{
+      padding:0 10px;
+      color: var(--font-color);
+  }
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: #66bb6a;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  
