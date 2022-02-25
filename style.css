@@ -17,8 +17,8 @@ lighter grey used for box insidessrgb(54, 57, 63)
 footer colour rgb(32, 34, 37)
 2
 text rgb(246, 246, 246)
-darker purple used for outside of boxes rgb(43, 8, 114)
-lighter purple used for inside of boxes rgb(27, 20, 61)
+darker purple used for outside of boxes rgb(47,49,54)
+lighter purple used for inside of boxes rgb(54, 57, 63)
 footer colour rgb(5, 0, 25) 
 
 */
@@ -43,13 +43,13 @@ h3 {
 .sidebar {
     display: flex;
     flex-direction: column;
-    background-color: rgb(43, 8, 114);
+    background-color: rgb(47,49,54);
     flex: 40%;
     padding: 0% 1% 1% 0.5%;
 }
 
 .name-box {
-    background-color: rgb(27, 20, 61);
+    background-color: rgb(54, 57, 63);
     display: flex;
     justify-content: center;
     border-radius:15px;
@@ -60,7 +60,7 @@ h3 {
 }
 
 .sidebar-box {
-    background-color: rgb(27, 20, 61);
+    background-color: rgb(54, 57, 63);
     padding: 0.5em 2em 2em 2em;
     border-radius:15px;
     margin-bottom:5%;
@@ -70,12 +70,12 @@ h3 {
     display: flex;
     flex-direction: column;
     flex: 0 100%;
-    background-color: rgb(43, 8, 114);
+    background-color: rgb(47,49,54);
     padding: 0 1% 1em 0;
 }
 
 .nav-bar{
-    background-color: rgb(43, 8, 114);
+    background-color: rgb(47,49,54);
     display: flex;
     justify-content: space-between;
     margin-top: 1em;
@@ -94,7 +94,7 @@ h3 {
     display: flex;
     border-radius:15x;
     cursor: pointer;
-    background-color: rgb(27, 20, 61);
+    background-color: rgb(54, 57, 63);
     border: 0;
     border-radius:15px;
     padding: 10px 26px 10px 26px ;
@@ -105,7 +105,7 @@ h3 {
 .text-body {
     display: flex;
     flex-direction: column;
-    background-color: rgb(27, 20, 61);
+    background-color: rgb(54, 57, 63);
     padding: 0.5em 2em 2em 2em;
     border-radius:15px;
 }
