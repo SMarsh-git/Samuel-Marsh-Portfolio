@@ -129,6 +129,7 @@ h3 {
     padding-bottom: 10px;
     color: var(--font-color);
 }
+
 .footer p{
     padding: 0 1%;
 }
@@ -193,7 +194,7 @@ h3 {
   }
   
   input:checked + .slider {
-    background-color: #66bb6a;
+    background-color: #00ff0d;
   }
   
   input:checked + .slider:before {
